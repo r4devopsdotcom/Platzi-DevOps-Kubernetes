@@ -1,16 +1,18 @@
 # Master Node
 Elements
 - API server: Is the brain of the cluster. Is connected to the etcd
-- Scheduler
+- Scheduler: Deploy pods in the nodes
 - Controller manager: Help the containers to reach their desired state.
+  - Types: Replica, Service, Deployment... managers
 - etcd: High availability database
 
 # Nodes components
-- Container runtime: docker
+- Container runtime: docker (containerd)
 - Kubelet:
-    - Is the Kubernetes agent that connects to the API server and ask for what the resources to run.
-    - Also, keep the Controller manager up to date about the state of pods
+    - Is the Kubernetes agent that connects to the control plane (API server), ask for what resources should be run and then deploy them
+    - Also, keep the control plane (API server) up to date about the state of pods
+    - Run liveness probes
 - Kub-proxy:
-    - Balance the service traffics
+    - Balance service traffic
 - Also called minions
-- Pods in the container, share the physic network
+- The Nodes share the physic network and it's recommended that they are visibile to each other
