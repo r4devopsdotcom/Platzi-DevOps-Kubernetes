@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-06-15T19:42:35Z"
+  labels:
+    app: hasher
+  name: hasher
+  namespace: default
+  resourceVersion: "11154"
+  uid: 1c6894b1-c80b-43e9-88aa-cfb018d1de75
+spec:
+  clusterIP: 10.103.8.71
+  clusterIPs:
+  - 10.103.8.71
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: hasher
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -5,13 +5,12 @@ Elements
 - Controller manager: Help the containers to reach their desired state.
 - etcd: High availability database
 
-# Common Nodes
+# Nodes components
 - Container runtime: docker
 - Kubelet:
     - Is the Kubernetes agent that connects to the API server and ask for what the resources to run.
     - Also, keep the Controller manager up to date about the state of pods
-    - Run lines prouds?
 - Kub-proxy:
     - Balance the service traffics
 - Also called minions
-- Share the physic network
+- Pods in the container, share the physic network

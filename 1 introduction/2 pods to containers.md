@@ -20,7 +20,7 @@ Kubernetes:
 
 # Pod
 - They are a group of containers that lives in a Node
-- Containers in the same pod, share the same namespace (network interface)
+- Containers in the same pod, share the same namespace
 
 # Scaling
 When a pod scales, it is replicated with all their containers inside

@@ -8,7 +8,7 @@ Containers = namespaces + cgroups + chroot
     - process: manage the process in a container
     - chroot: grant access to the dependencies needed for the container
 - cgroups (control groups): limit OS resources
-- chroot: 
+- chroot:
 
 # Architecture
 App1        App2        App3
